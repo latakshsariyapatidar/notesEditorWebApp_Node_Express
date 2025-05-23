@@ -1,0 +1,61 @@
+@import "tailwindcss";
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    height: 100%;
+    width: 100%;
+}
+
+#title{
+    padding: 1vh 1vw;
+    border-radius: 4px;
+    color: white;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+#task_data{
+    padding: 1vh 1vw;
+    border-radius: 4px;
+    color: white;
+    width: 100%;
+    resize: none;
+    margin-bottom: 10px;
+}
+
+#submit{
+    width: 100%;
+    color: white;
+    border-radius: 4px;
+    padding: 1vh 1vw;
+    margin-bottom: 10px;
+}
+
+.form{
+    padding: 10px;
+}
+
+.cards{
+    padding: 2vw;
+    display: flex;
+    gap: 1vw;
+    flex-wrap: wrap;
+}
+
+#task{
+    width: fit-content;
+    padding: 1vw 2vw;
+    width: 23vw;
+}
+
+#task h1{
+    color:white;
+    font-size: 2vw;
+}
+

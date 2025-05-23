@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <div class="main w-full h-full bg-zinc-900 p-10">
+        <a href="/" class="text-blue-500 mb-10 inline-block">Go Back</a>
+        <form action="/update" method="post" class="w-full">
+            <input type="hidden" name="oldFileName" value="<%=fileName%>">
+            <input type="hidden" name="oldFileContent" value="<%=fileContent%>">
+            <input type="text" name="newFileName" id="newFileName" class="block w-full bg-zinc-700 rounded-md px-5 py-1 mb-3 text-white " placeholder="New File Name">
+            <textarea name="newFileContent" id="newFileContent" class="block w-full bg-zinc-700 resize-none  rounded-md px-5 py-1 mb-10 text-white" placeholder="New File Content"></textarea>
+            <input type="submit" class="block bg-amber-400 rounded-md px-5 py-1">
+        </form>
+    </div>
+</body>
+</html>

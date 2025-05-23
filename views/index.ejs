@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+<script src="https://cdn.tailwindcss.com"></script>
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
+  </head>
+  <body>
+    <div class="main w-full min-h-screen bg-zinc-900">
+        <div class="form">
+            <form action="/create" method="post">
+                <input id="title" class="block bg-zinc-700" type="text" placeholder="Title goes here" name="fileName">
+                <textarea id="task_data" class="block bg-zinc-700" placeholder="Write your task details here" name="fileContent"></textarea>
+                <input id="submit" class="block bg-blue-700" type="submit" value="Create Task">
+            </form>
+        </div>
+        <div class="cards">
+
+          <% if (files.length > 0) {%>
+            <% files.forEach(file => {%>
+              <div id="task" class="rounded-md bg-zinc-700 tracking-tighter">
+                <h1 class="tracking-tighter"><%= file %></h1>
+                <a href='files/<%=file%>'' class=  "text-blue-700">Read More</a>
+                <a href="/edit/<%=file%>" class="m-10 text-zinc-500">
+                  Edit
+                  <i class="ri-pencil-line text-zinc-500"></i>
+                </a>
+              </div>
+            <% })%>
+          <% } else {%>
+          <h3 class="font-md text-zinc-600">No Tasks Yet!</h3>
+          <%}%>
+        </div>
+    </div>
+</body>
+</html>
